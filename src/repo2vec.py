@@ -6,11 +6,11 @@ from .struct2vec import Struct2Vec
 from .source2vec import Source2Vec
 
 class Repo2Vec:
-    def __init__(self, repo_path, vector_size=128, weights=(1, 1, 1), github_token=None):
+    def __init__(self, repo_path, vector_size=128, weights=(1, 1, 1)):
         self.repo_path = repo_path
         self.vector_size = vector_size
         self.weights = weights
-        self.meta2vec = Meta2Vec(repo_path, vector_size, github_token)
+        self.meta2vec = Meta2Vec(repo_path, vector_size)
         self.struct2vec = Struct2Vec(repo_path, vector_size)
         self.source2vec = Source2Vec(repo_path, vector_size)
 
