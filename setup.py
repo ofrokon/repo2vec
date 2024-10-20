@@ -6,12 +6,12 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name="repo2vec",
     version="0.1.0",
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="Md Omar Faruk Rokon",
+    author_email="mroko001@ucr.edu",
     description="A tool for creating vector representations of software repositories",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/repo2vec",
+    url="https://github.com/ofrokon/repo2vec",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     classifiers=[
