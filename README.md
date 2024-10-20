@@ -21,7 +21,7 @@ To install Repo2Vec, follow these steps:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/repo2vec.git
+   git clone https://github.com/ofrokon/repo2vec.git
    ```
 
 2. Change to the project directory:
