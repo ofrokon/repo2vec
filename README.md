@@ -5,7 +5,7 @@ Repo2Vec is a tool for creating vector representations (embeddings) of software 
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/repo2vec.git
+git clone https://github.com/ofrokon/repo2vec.git
 cd repo2vec
 pip install -r requirements.txt
 ```
