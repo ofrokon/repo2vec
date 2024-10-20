@@ -7,7 +7,7 @@ def main():
     repo_path = "/path/to/your/repository"
     
     # Initialize Repo2Vec
-    repo2vec = Repo2Vec(repo_path, vector_size=128, weights=(1, 0.8, 1.2))
+    repo2vec = Repo2Vec(repo_path, combination_method='weighted_sum', weights=(1, 0.8, 1.2), normalize=True)
     
     # Generate the embedding
     embedding = repo2vec.generate_embedding()
