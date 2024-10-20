@@ -41,14 +41,20 @@ To install Repo2Vec, follow these steps:
 
 ## Usage
 
-Here's a basic example of how to use Repo2Vec:
+Here's a basic example of how to use Repo2Vec with custom parameters:
 
 ```python
 from repo2vec import Repo2Vec
 
-# Initialize Repo2Vec with the path to your repository
+# Initialize Repo2Vec with the path to your repository and custom parameters
 repo_path = "/path/to/your/repository"
-repo2vec = Repo2Vec(repo_path)
+repo2vec = Repo2Vec(
+    repo_path,
+    vector_size=128,
+    combination_method='weighted_sum',
+    weights=(1, 0.8, 1.2),
+    normalize=True
+)
 
 # Generate the embedding
 embedding = repo2vec.generate_embedding()
@@ -56,6 +62,13 @@ embedding = repo2vec.generate_embedding()
 print(f"Repository embedding shape: {embedding.shape}")
 print(f"Repository embedding: {embedding}")
 ```
+
+Parameters:
+- `repo_path`: Path to the repository you want to analyze.
+- `vector_size`: Size of the embedding vector for each component (meta, struct, source). Default is 128.
+- `combination_method`: Method to combine the embeddings. Options are 'concatenate', 'sum', 'average', 'median', 'weighted_sum'. Default is 'weighted_sum'.
+- `weights`: Weights for combining the meta, struct, and source vectors when using 'weighted_sum'. Default is (1, 1, 1).
+- `normalize`: Whether to normalize the vectors before and after combination. Default is True.
 
 For more detailed examples, see the `examples/example_usage.py` file in the repository.
 
